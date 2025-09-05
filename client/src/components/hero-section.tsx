@@ -17,8 +17,8 @@ export function HeroSection() {
   };
 
   return (
-    <section id="inicio" className="pt-16 min-h-screen flex items-center gradient-bg tech-pattern">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section id="inicio" className="pt-16 min-h-screen flex items-center gradient-bg relative">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8" data-testid="hero-content">
             <div className="space-y-4">
