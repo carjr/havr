@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import havrLogo from "@assets/generated_images/HAVR_Tecnologia_logo_PNG_57c4aa27.png";
+import havrLogo from "@assets/HAVR---INVERSO_1757076947882.png";
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

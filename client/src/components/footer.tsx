@@ -1,5 +1,5 @@
 import { SiLinkedin, SiInstagram, SiFacebook } from "react-icons/si";
-import havrLogo from "@assets/generated_images/HAVR_Tecnologia_logo_PNG_57c4aa27.png";
+import havrLogo from "@assets/HAVR---INVERSO_1757076947882.png";
 
 export function Footer() {
   const services = [
