@@ -221,7 +221,7 @@ document.head.appendChild(style);
 
 // Optimize images loading (excluding logo and critical images)
 document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('img:not(.logo):not(.hero-image)');
+    const images = document.querySelectorAll('img:not(.logo):not(.hero-image):not(.system-image)');
     
     images.forEach(img => {
         img.addEventListener('load', function() {
@@ -233,16 +233,16 @@ document.addEventListener('DOMContentLoaded', function() {
             // You could add a placeholder image here if needed
         });
         
-        // Set initial opacity for smooth loading (but not for logo)
+        // Set initial opacity for smooth loading (but not for logo or system images)
         img.style.opacity = '0';
         img.style.transition = 'opacity 0.3s ease';
     });
     
-    // Ensure logo is always visible
-    const logos = document.querySelectorAll('.logo');
-    logos.forEach(logo => {
-        logo.style.opacity = '1';
-        logo.style.display = 'block';
+    // Ensure logo and system images are always visible
+    const criticalImages = document.querySelectorAll('.logo, .system-image');
+    criticalImages.forEach(img => {
+        img.style.opacity = '1';
+        img.style.display = 'block';
     });
 });
 
@@ -359,13 +359,13 @@ document.addEventListener('DOMContentLoaded', function() {
         lucide.createIcons();
     }
     
-    // Force logo visibility as fallback
+    // Force logo and system images visibility as fallback
     setTimeout(function() {
-        const logos = document.querySelectorAll('.logo');
-        logos.forEach(logo => {
-            logo.style.opacity = '1';
-            logo.style.display = 'block';
-            logo.style.visibility = 'visible';
+        const criticalImages = document.querySelectorAll('.logo, .system-image');
+        criticalImages.forEach(img => {
+            img.style.opacity = '1';
+            img.style.display = 'block';
+            img.style.visibility = 'visible';
         });
     }, 100);
     
