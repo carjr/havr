@@ -219,9 +219,9 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Optimize images loading
+// Optimize images loading (excluding logo and critical images)
 document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('img');
+    const images = document.querySelectorAll('img:not(.logo):not(.hero-image)');
     
     images.forEach(img => {
         img.addEventListener('load', function() {
@@ -233,9 +233,16 @@ document.addEventListener('DOMContentLoaded', function() {
             // You could add a placeholder image here if needed
         });
         
-        // Set initial opacity for smooth loading
+        // Set initial opacity for smooth loading (but not for logo)
         img.style.opacity = '0';
         img.style.transition = 'opacity 0.3s ease';
+    });
+    
+    // Ensure logo is always visible
+    const logos = document.querySelectorAll('.logo');
+    logos.forEach(logo => {
+        logo.style.opacity = '1';
+        logo.style.display = 'block';
     });
 });
 
@@ -351,6 +358,16 @@ document.addEventListener('DOMContentLoaded', function() {
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
     }
+    
+    // Force logo visibility as fallback
+    setTimeout(function() {
+        const logos = document.querySelectorAll('.logo');
+        logos.forEach(logo => {
+            logo.style.opacity = '1';
+            logo.style.display = 'block';
+            logo.style.visibility = 'visible';
+        });
+    }, 100);
     
     console.log('HAVR Tecnologia website loaded successfully!');
 });
