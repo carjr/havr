@@ -158,7 +158,7 @@ export function ContactSection() {
               </div>
 
               <a
-                href="https://wa.me/5511999999999"
+                href="https://wa.me/5517992331492"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center justify-center space-x-2"

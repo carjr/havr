@@ -69,7 +69,7 @@ export function Navbar() {
           {/* CTA Button and Mobile Menu */}
           <div className="flex items-center space-x-4">
             <a 
-              href="https://wa.me/5511999999999" 
+              href="https://wa.me/5517992331492" 
               target="_blank" 
               rel="noopener noreferrer"
               data-testid="button-whatsapp-nav"

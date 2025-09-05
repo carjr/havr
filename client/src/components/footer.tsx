@@ -72,7 +72,7 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Contato</h4>
             <div className="space-y-2">
               <div className="text-gray-400" data-testid="footer-email">contato@havrtecnologia.com</div>
-              <div className="text-gray-400" data-testid="footer-phone">+55 11 99999-9999</div>
+              <div className="text-gray-400" data-testid="footer-phone">+55 17 99233-1492</div>
               <div className="flex space-x-4 mt-4" data-testid="footer-social">
                 <a 
                   href="#" 
