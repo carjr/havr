@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import havrLogo from "@assets/Imagem do WhatsApp de 2025-09-02 à(s) 11.22.03_9124b71d_1757075385871.jpg";
+import havrLogo from "@assets/generated_images/HAVR_Tecnologia_logo_PNG_57c4aa27.png";
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
