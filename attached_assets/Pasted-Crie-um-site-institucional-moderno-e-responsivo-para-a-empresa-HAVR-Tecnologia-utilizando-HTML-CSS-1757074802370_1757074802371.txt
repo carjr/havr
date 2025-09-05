@@ -1,0 +1,95 @@
+Crie um site institucional moderno e responsivo para a empresa HAVR Tecnologia, utilizando HTML, CSS (Tailwind) e JavaScript.
+O site deve transmitir inovação, tecnologia e confiança, com foco em conversão de clientes.
+
+Estrutura do site:
+
+1. Cabeçalho (Navbar)
+
+Logo da HAVR Tecnologia (usar um placeholder “HAVR Tecnologia”).
+
+Menu com âncoras: Início, Serviços, Sistemas, Sobre Nós, Contato.
+
+Botão de destaque: “Fale Conosco” (link para WhatsApp).
+
+2. Hero Section (Início)
+
+Fundo clean e tecnológico.
+
+Texto principal:
+
+Título: "Soluções em Tecnologia sob medida para sua empresa"
+
+Subtítulo: "Sistemas personalizados, aplicativos exclusivos e inteligência artificial integrada."
+
+Botão de ação: “Solicitar Demonstração”.
+
+Imagem ou ilustração tecnológica (placeholder).
+
+3. Serviços
+
+Blocos com ícones modernos:
+
+Sistemas personalizados → “Automatize processos e tenha um sistema sob medida.”
+
+Aplicativos Android e iOS → “Aplicativos exclusivos para ampliar sua presença digital.”
+
+Inteligência Artificial no WhatsApp → “Atendimento rápido e eficiente, 24h por dia.”
+
+CRM com WhatsApp → “Centralize conversas e gerencie relacionamentos com facilidade.”
+
+4. Sistemas (Seção com cards)
+
+Eduflow
+
+Texto: Gestão completa para escolas com matrícula, pagamentos e comunicação integrada.
+
+Destaques: Qualificação de Leads, Previsão de Evasão, Automação de Cobrança.
+
+Botão: “Saiba Mais”.
+
+OdontoSync
+
+Texto: Gestão integrada para clínicas odontológicas, com agendamento, financeiro e IA.
+
+Destaques: Gestão de Pacientes, Agenda Inteligente, Cobrança Automática.
+
+Botão: “Saiba Mais”.
+
+HAZAP
+
+Texto: CRM completo para WhatsApp, centralizando atendimentos e métricas.
+
+Destaques: Filas de Atendimento, TMA, Respostas Automáticas.
+
+Botão: “Saiba Mais”.
+
+5. Sobre Nós
+
+Pequeno texto institucional:
+“A HAVR Tecnologia desenvolve soluções inovadoras em software, aplicativos e inteligência artificial. Nosso compromisso é transformar negócios com sistemas inteligentes, escaláveis e personalizados.”
+
+6. Contato
+
+Formulário (Nome, Email, Mensagem).
+
+Botão enviar.
+
+Destaque: “Ou fale diretamente pelo WhatsApp” com botão fixo.
+
+7. Rodapé
+
+Direitos autorais: “© 2025 HAVR Tecnologia - Todos os direitos reservados”.
+
+Links rápidos para redes sociais (placeholders).
+
+Requisitos Técnicos:
+
+Design clean e responsivo (usar Tailwind).
+
+Estrutura organizada em seções com scroll suave.
+
+Utilizar cores base azul, branco e cinza.
+
+Botões com hover effect.
+
+Código comentado e bem estruturado para fácil edição posterior.
