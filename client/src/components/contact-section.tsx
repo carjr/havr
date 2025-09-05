@@ -130,7 +130,7 @@ export function ContactSection() {
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <SiWhatsapp className="text-primary text-xl" />
+                    <MessageSquare className="text-primary text-xl" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-card-foreground">WhatsApp</h4>
@@ -164,7 +164,7 @@ export function ContactSection() {
                 className="mt-8 w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center justify-center space-x-2"
                 data-testid="button-whatsapp-contact"
               >
-                <SiWhatsapp />
+                <MessageSquare />
                 <span>Falar no WhatsApp</span>
               </a>
             </div>

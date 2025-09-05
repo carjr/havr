@@ -50,7 +50,7 @@ export function SystemsSection() {
               <div className="p-8">
                 {/* System Logo/Image */}
                 {system.image ? (
-                  <div className="w-20 h-20 mb-6 rounded-2xl overflow-hidden bg-gray-100 flex items-center justify-center">
+                  <div className="w-20 h-20 mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-blue-50 to-cyan-50 flex items-center justify-center p-2">
                     <img 
                       src={system.image} 
                       alt={`${system.title} logo`}

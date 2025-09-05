@@ -1,4 +1,4 @@
-import { SiWhatsapp } from "react-icons/si";
+import { MessageCircle } from "lucide-react";
 
 export function FloatingWhatsApp() {
   return (
@@ -9,7 +9,7 @@ export function FloatingWhatsApp() {
       className="floating-whatsapp bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors"
       data-testid="floating-whatsapp"
     >
-      <SiWhatsapp className="text-2xl" />
+      <MessageCircle className="text-2xl" />
     </a>
   );
 }

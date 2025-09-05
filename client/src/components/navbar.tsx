@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import havrLogo from "@assets/Imagem do WhatsApp de 2025-09-02 à(s) 11.22.03_9124b71d_1757075385871.jpg";
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,11 +19,12 @@ export function Navbar() {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2" data-testid="navbar-logo">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">#</span>
-            </div>
-            <span className="text-xl font-bold text-foreground">HAVR Tecnologia</span>
+          <div className="flex items-center space-x-3" data-testid="navbar-logo">
+            <img 
+              src={havrLogo} 
+              alt="HAVR Tecnologia" 
+              className="h-10 w-auto object-contain"
+            />
           </div>
 
           {/* Desktop Menu */}

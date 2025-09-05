@@ -1,4 +1,5 @@
 import { SiLinkedin, SiInstagram, SiFacebook } from "react-icons/si";
+import havrLogo from "@assets/Imagem do WhatsApp de 2025-09-02 à(s) 11.22.03_9124b71d_1757075385871.jpg";
 
 export function Footer() {
   const services = [
@@ -20,11 +21,12 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Company */}
           <div className="space-y-4" data-testid="footer-company">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">#</span>
-              </div>
-              <span className="text-xl font-bold">HAVR Tecnologia</span>
+            <div className="flex items-center space-x-3">
+              <img 
+                src={havrLogo} 
+                alt="HAVR Tecnologia" 
+                className="h-10 w-auto object-contain"
+              />
             </div>
             <p className="text-gray-400 leading-relaxed" data-testid="footer-description">
               Transformando negócios com soluções tecnológicas inovadoras e inteligência artificial.
