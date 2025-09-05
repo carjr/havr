@@ -82,12 +82,18 @@ export function SystemsSection() {
                   ))}
                 </div>
 
-                <Button 
-                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
-                  data-testid={`button-system-${index}`}
+                <a 
+                  href="https://wa.me/5517992331492"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Saiba Mais
-                </Button>
+                  <Button 
+                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                    data-testid={`button-system-${index}`}
+                  >
+                    Saiba Mais
+                  </Button>
+                </a>
               </div>
             </div>
           ))}
