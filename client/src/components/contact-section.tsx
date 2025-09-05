@@ -175,12 +175,18 @@ export function ContactSection() {
               <p className="mb-6 opacity-90">
                 Transforme seu negócio com nossas soluções personalizadas. Solicite uma demonstração gratuita.
               </p>
-              <Button 
-                className="bg-white text-primary hover:bg-white/90"
-                data-testid="button-demo-free"
+              <a
+                href="https://wa.me/5517992331492"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Demonstração Gratuita
-              </Button>
+                <Button 
+                  className="bg-white text-primary hover:bg-white/90"
+                  data-testid="button-demo-free"
+                >
+                  Demonstração Gratuita
+                </Button>
+              </a>
             </div>
           </div>
         </div>
