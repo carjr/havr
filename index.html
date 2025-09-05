@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAVR Tecnologia - Soluções em Tecnologia sob medida</title>
+    <meta name="description" content="A HAVR Tecnologia desenvolve soluções inovadoras em software, aplicativos e inteligência artificial. Sistemas personalizados, escaláveis e inteligentes para sua empresa.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="HAVR Tecnologia - Soluções em Tecnologia">
+    <meta property="og:description" content="Sistemas personalizados, aplicativos exclusivos e inteligência artificial integrada para sua empresa.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://havrtecnologia.com">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <div class="nav-logo" data-testid="navbar-logo">
+                    <img src="attached_assets/HAVR---INVERSO_1757076947882.png" alt="HAVR Tecnologia" class="logo">
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="nav-menu" id="nav-menu">
+                    <button class="nav-link" onclick="scrollToSection('inicio')" data-testid="nav-link-inicio">Início</button>
+                    <button class="nav-link" onclick="scrollToSection('servicos')" data-testid="nav-link-servicos">Serviços</button>
+                    <button class="nav-link" onclick="scrollToSection('sistemas')" data-testid="nav-link-sistemas">Sistemas</button>
+                    <button class="nav-link" onclick="scrollToSection('sobre')" data-testid="nav-link-sobre">Sobre Nós</button>
+                    <button class="nav-link" onclick="scrollToSection('contato')" data-testid="nav-link-contato">Contato</button>
+                </div>
+
+                <!-- CTA Button and Mobile Menu -->
+                <div class="nav-actions">
+                    <a href="https://wa.me/5517992331492" target="_blank" rel="noopener noreferrer" data-testid="button-whatsapp-nav">
+                        <button class="btn btn-primary">Fale Conosco</button>
+                    </a>
+                    
+                    <button class="mobile-menu-toggle" id="mobile-menu-toggle" data-testid="button-mobile-menu">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobile-menu-content" data-testid="mobile-menu">
+                <button class="nav-link" onclick="scrollToSection('inicio'); closeMobileMenu()" data-testid="mobile-nav-link-inicio">Início</button>
+                <button class="nav-link" onclick="scrollToSection('servicos'); closeMobileMenu()" data-testid="mobile-nav-link-servicos">Serviços</button>
+                <button class="nav-link" onclick="scrollToSection('sistemas'); closeMobileMenu()" data-testid="mobile-nav-link-sistemas">Sistemas</button>
+                <button class="nav-link" onclick="scrollToSection('sobre'); closeMobileMenu()" data-testid="mobile-nav-link-sobre">Sobre Nós</button>
+                <button class="nav-link" onclick="scrollToSection('contato'); closeMobileMenu()" data-testid="mobile-nav-link-contato">Contato</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text" data-testid="hero-content">
+                    <div class="hero-titles">
+                        <h1 class="hero-title" data-testid="hero-title">
+                            Soluções em Tecnologia 
+                            <span class="accent-text">sob medida</span> 
+                            para sua empresa
+                        </h1>
+                        <p class="hero-subtitle" data-testid="hero-subtitle">
+                            Sistemas personalizados, aplicativos exclusivos e inteligência artificial integrada.
+                        </p>
+                    </div>
+                    
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/5517992331492" target="_blank" rel="noopener noreferrer">
+                            <button class="btn btn-white" data-testid="button-demo">
+                                Solicitar Demonstração
+                            </button>
+                        </a>
+                        <button class="btn btn-outline" onclick="scrollToSection('sistemas')" data-testid="button-systems">
+                            Ver Nossos Sistemas
+                        </button>
+                    </div>
+
+                    <div class="hero-stats" data-testid="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number" data-testid="stat-projects">50+</div>
+                            <div class="stat-label">Projetos Entregues</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-testid="stat-satisfaction">99%</div>
+                            <div class="stat-label">Satisfação Cliente</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-testid="stat-support">24/7</div>
+                            <div class="stat-label">Suporte IA</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-illustration" data-testid="hero-illustration">
+                    <div class="illustration">
+                        <div class="illustration-bg-1"></div>
+                        <div class="illustration-bg-2"></div>
+                        <div class="illustration-center">
+                            <i data-lucide="bot" class="illustration-icon"></i>
+                        </div>
+                        <div class="floating-dot dot-1"></div>
+                        <div class="floating-dot dot-2"></div>
+                        <div class="floating-dot dot-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="services">
+        <div class="container">
+            <div class="section-header" data-testid="services-header">
+                <h2 class="section-title" data-testid="services-title">
+                    Nossos <span class="primary-text">Serviços</span>
+                </h2>
+                <p class="section-subtitle" data-testid="services-subtitle">
+                    Oferecemos soluções completas em tecnologia para impulsionar seu negócio
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card hover-lift" data-testid="service-card-0">
+                    <div class="service-icon">
+                        <i data-lucide="code"></i>
+                    </div>
+                    <h3 class="service-title" data-testid="service-title-0">Sistemas Personalizados</h3>
+                    <p class="service-description" data-testid="service-description-0">
+                        Automatize processos e tenha um sistema sob medida para suas necessidades específicas.
+                    </p>
+                </div>
+
+                <div class="service-card hover-lift" data-testid="service-card-1">
+                    <div class="service-icon">
+                        <i data-lucide="smartphone"></i>
+                    </div>
+                    <h3 class="service-title" data-testid="service-title-1">Aplicativos Mobile</h3>
+                    <p class="service-description" data-testid="service-description-1">
+                        Aplicativos exclusivos para Android e iOS para ampliar sua presença digital.
+                    </p>
+                </div>
+
+                <div class="service-card hover-lift" data-testid="service-card-2">
+                    <div class="service-icon">
+                        <i data-lucide="bot"></i>
+                    </div>
+                    <h3 class="service-title" data-testid="service-title-2">IA no WhatsApp</h3>
+                    <p class="service-description" data-testid="service-description-2">
+                        Atendimento inteligente e eficiente no WhatsApp, disponível 24 horas por dia.
+                    </p>
+                </div>
+
+                <div class="service-card hover-lift" data-testid="service-card-3">
+                    <div class="service-icon">
+                        <i data-lucide="message-square"></i>
+                    </div>
+                    <h3 class="service-title" data-testid="service-title-3">CRM com WhatsApp</h3>
+                    <p class="service-description" data-testid="service-description-3">
+                        Centralize conversas e gerencie relacionamentos com seus clientes com facilidade.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Systems Section -->
+    <section id="sistemas" class="systems">
+        <div class="container">
+            <div class="section-header" data-testid="systems-header">
+                <h2 class="section-title" data-testid="systems-title">
+                    Nossos <span class="primary-text">Sistemas</span>
+                </h2>
+                <p class="section-subtitle" data-testid="systems-subtitle">
+                    Conheça nossas principais soluções desenvolvidas para diferentes segmentos
+                </p>
+            </div>
+
+            <div class="systems-grid">
+                <div class="system-card hover-lift" data-testid="system-card-0">
+                    <div class="system-content">
+                        <!-- Eduflow with image -->
+                        <div class="system-image-wrapper">
+                            <img src="attached_assets/Flowlino_1757075195548.png" alt="Eduflow logo" class="system-image" data-testid="system-image-0">
+                        </div>
+                        
+                        <h3 class="system-title" data-testid="system-title-0">Eduflow</h3>
+                        <p class="system-description" data-testid="system-description-0">
+                            Gestão completa para escolas com matrícula, pagamentos e comunicação integrada.
+                        </p>
+                        
+                        <div class="system-features">
+                            <div class="feature-item">
+                                <div class="feature-dot"></div>
+                                <span data-testid="system-feature-0-0">Qualificação de Leads</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-dot"></div>
+                                <span data-testid="system-feature-0-1">Previsão de Evasão</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-dot"></div>
+                                <span data-testid="system-feature-0-2">Automação de Cobrança</span>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/5517992331492" target="_blank" rel="noopener noreferrer">
+                            <button class="btn btn-primary btn-full" data-testid="button-system-0">
+                                Saiba Mais
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="system-card hover-lift" data-testid="system-card-1">
+                    <div class="system-content">
+                        <!-- OdontoSync with gradient -->
+                        <div class="system-icon gradient-primary-accent">
+                            <i data-lucide="activity"></i>
+                        </div>
+                        
+                        <h3 class="system-title" data-testid="system-title-1">OdontoSync</h3>
+                        <p class="system-description" data-testid="system-description-1">
+                            Gestão integrada para clínicas odontológicas, com agendamento, financeiro e IA.
+                        </p>
+                        
+                        <div class="system-features">
+                            <div class="feature-item">
+                                <div class="feature-dot"></div>
+                                <span data-testid="system-feature-1-0">Gestão de Pacientes</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-dot"></div>
+                                <span data-testid="system-feature-1-1">Agenda Inteligente</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-dot"></div>
+                                <span data-testid="system-feature-1-2">Cobrança Automática</span>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/5517992331492" target="_blank" rel="noopener noreferrer">
+                            <button class="btn btn-primary btn-full" data-testid="button-system-1">
+                                Saiba Mais
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="system-card hover-lift" data-testid="system-card-2">
+                    <div class="system-content">
+                        <!-- HAZAP with gradient -->
+                        <div class="system-icon gradient-green-primary">
+                            <i data-lucide="message-square"></i>
+                        </div>
+                        
+                        <h3 class="system-title" data-testid="system-title-2">HAZAP</h3>
+                        <p class="system-description" data-testid="system-description-2">
+                            CRM completo para WhatsApp, centralizando atendimentos e métricas de performance.
+                        </p>
+                        
+                        <div class="system-features">
+                            <div class="feature-item">
+                                <div class="feature-dot"></div>
+                                <span data-testid="system-feature-2-0">Filas de Atendimento</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-dot"></div>
+                                <span data-testid="system-feature-2-1">TMA (Tempo Médio)</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-dot"></div>
+                                <span data-testid="system-feature-2-2">Respostas Automáticas</span>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/5517992331492" target="_blank" rel="noopener noreferrer">
+                            <button class="btn btn-primary btn-full" data-testid="button-system-2">
+                                Saiba Mais
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text" data-testid="about-content">
+                    <h2 class="section-title" data-testid="about-title">
+                        Sobre a <span class="primary-text">HAVR Tecnologia</span>
+                    </h2>
+                    <p class="about-description" data-testid="about-description">
+                        A HAVR Tecnologia desenvolve soluções inovadoras em software, aplicativos e inteligência artificial. 
+                        Nosso compromisso é transformar negócios com sistemas inteligentes, escaláveis e personalizados.
+                    </p>
+                    <div class="about-stats" data-testid="about-stats">
+                        <div class="about-stat">
+                            <div class="about-stat-number" data-testid="stat-experience">5+</div>
+                            <div class="about-stat-label">Anos de Experiência</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="about-stat-number" data-testid="stat-focus">100%</div>
+                            <div class="about-stat-label">Foco no Cliente</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-advantages" data-testid="about-advantages">
+                    <h3 class="advantages-title" data-testid="advantages-title">
+                        Por que escolher a HAVR?
+                    </h3>
+                    <div class="advantages-list">
+                        <div class="advantage-item" data-testid="advantage-0">
+                            <div class="advantage-icon">
+                                <i data-lucide="rocket"></i>
+                            </div>
+                            <div class="advantage-text">
+                                <h4 class="advantage-title" data-testid="advantage-title-0">Inovação Constante</h4>
+                                <p class="advantage-description" data-testid="advantage-description-0">Sempre utilizamos as tecnologias mais avançadas</p>
+                            </div>
+                        </div>
+
+                        <div class="advantage-item" data-testid="advantage-1">
+                            <div class="advantage-icon">
+                                <i data-lucide="users"></i>
+                            </div>
+                            <div class="advantage-text">
+                                <h4 class="advantage-title" data-testid="advantage-title-1">Equipe Especializada</h4>
+                                <p class="advantage-description" data-testid="advantage-description-1">Profissionais experientes e capacitados</p>
+                            </div>
+                        </div>
+
+                        <div class="advantage-item" data-testid="advantage-2">
+                            <div class="advantage-icon">
+                                <i data-lucide="clock"></i>
+                            </div>
+                            <div class="advantage-text">
+                                <h4 class="advantage-title" data-testid="advantage-title-2">Suporte 24/7</h4>
+                                <p class="advantage-description" data-testid="advantage-description-2">Atendimento contínuo com IA integrada</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <div class="section-header" data-testid="contact-header">
+                <h2 class="section-title" data-testid="contact-title">
+                    Entre em <span class="primary-text">Contato</span>
+                </h2>
+                <p class="section-subtitle" data-testid="contact-subtitle">
+                    Vamos conversar sobre como podemos impulsionar seu negócio com tecnologia
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper" data-testid="contact-form">
+                    <h3 class="contact-form-title">Envie sua mensagem</h3>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nome completo</label>
+                            <input type="text" id="name" name="name" class="form-input" required data-testid="input-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" required data-testid="input-email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" class="form-textarea" required data-testid="input-message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" data-testid="button-submit-form">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-wrapper">
+                    <div class="contact-info" data-testid="contact-info">
+                        <h3 class="contact-info-title">Ou fale diretamente conosco</h3>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-method-icon">
+                                    <i data-lucide="message-square"></i>
+                                </div>
+                                <div class="contact-method-text">
+                                    <h4 class="contact-method-title">WhatsApp</h4>
+                                    <p class="contact-method-description">Atendimento imediato via IA</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="contact-method-icon">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div class="contact-method-text">
+                                    <h4 class="contact-method-title">Email</h4>
+                                    <p class="contact-method-description">contato@havrtecnologia.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="contact-method-icon">
+                                    <i data-lucide="clock"></i>
+                                </div>
+                                <div class="contact-method-text">
+                                    <h4 class="contact-method-title">Horário</h4>
+                                    <p class="contact-method-description">24/7 com IA - Segunda à Sexta 8h às 18h</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/5517992331492" target="_blank" rel="noopener noreferrer">
+                            <button class="btn btn-whatsapp btn-full" data-testid="button-whatsapp-contact">
+                                <i data-lucide="message-square"></i>
+                                Falar no WhatsApp
+                            </button>
+                        </a>
+                    </div>
+
+                    <!-- CTA Card -->
+                    <div class="contact-cta" data-testid="contact-cta">
+                        <h3 class="cta-title">Pronto para inovar?</h3>
+                        <p class="cta-description">
+                            Transforme seu negócio com nossas soluções personalizadas. Solicite uma demonstração gratuita.
+                        </p>
+                        <a href="https://wa.me/5517992331492" target="_blank" rel="noopener noreferrer">
+                            <button class="btn btn-white" data-testid="button-demo-free">
+                                Demonstração Gratuita
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" data-testid="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company -->
+                <div class="footer-section" data-testid="footer-company">
+                    <div class="footer-logo">
+                        <img src="attached_assets/HAVR---INVERSO_1757076947882.png" alt="HAVR Tecnologia" class="logo">
+                    </div>
+                    <p class="footer-description" data-testid="footer-description">
+                        Transformando negócios com soluções tecnológicas inovadoras e inteligência artificial.
+                    </p>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-section" data-testid="footer-services">
+                    <h4 class="footer-title">Serviços</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link" data-testid="footer-service-0">Sistemas Personalizados</a>
+                        <a href="#" class="footer-link" data-testid="footer-service-1">Apps Mobile</a>
+                        <a href="#" class="footer-link" data-testid="footer-service-2">IA WhatsApp</a>
+                        <a href="#" class="footer-link" data-testid="footer-service-3">CRM</a>
+                    </div>
+                </div>
+
+                <!-- Products -->
+                <div class="footer-section" data-testid="footer-products">
+                    <h4 class="footer-title">Produtos</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link" data-testid="footer-product-0">Eduflow</a>
+                        <a href="#" class="footer-link" data-testid="footer-product-1">OdontoSync</a>
+                        <a href="#" class="footer-link" data-testid="footer-product-2">HAZAP</a>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-section" data-testid="footer-contact">
+                    <h4 class="footer-title">Contato</h4>
+                    <div class="footer-contact-info">
+                        <div class="footer-contact-item" data-testid="footer-email">contato@havrtecnologia.com</div>
+                        <div class="footer-contact-item" data-testid="footer-phone">+55 17 99233-1492</div>
+                        <div class="footer-social" data-testid="footer-social">
+                            <a href="#" class="social-link" data-testid="footer-linkedin">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" data-testid="footer-instagram">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" data-testid="footer-facebook">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom" data-testid="footer-copyright">
+                <p>© 2025 HAVR Tecnologia - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/5517992331492" target="_blank" rel="noopener noreferrer" 
+       class="floating-whatsapp" data-testid="floating-whatsapp">
+        <i data-lucide="message-circle"></i>
+    </a>
+
+    <!-- Toast notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
