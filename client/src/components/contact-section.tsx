@@ -1,0 +1,190 @@
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { useToast } from "@/hooks/use-toast";
+import { MessageSquare, Mail, Clock } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
+
+export function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      toast({
+        title: "Mensagem enviada com sucesso!",
+        description: "Entraremos em contato em breve.",
+      });
+      
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      toast({
+        title: "Erro ao enviar mensagem",
+        description: "Tente novamente ou entre em contato pelo WhatsApp.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <section id="contato" className="py-24 bg-background">
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="text-center mb-16" data-testid="contact-header">
+          <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-4" data-testid="contact-title">
+            Entre em <span className="text-primary">Contato</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="contact-subtitle">
+            Vamos conversar sobre como podemos impulsionar seu negócio com tecnologia
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-16">
+          {/* Contact Form */}
+          <div className="bg-card p-8 rounded-2xl border border-border" data-testid="contact-form">
+            <h3 className="text-2xl font-semibold text-card-foreground mb-6">Envie sua mensagem</h3>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <Label htmlFor="name" className="text-sm font-medium text-card-foreground mb-2">
+                  Nome completo
+                </Label>
+                <Input
+                  id="name"
+                  name="name"
+                  type="text"
+                  required
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  className="w-full"
+                  data-testid="input-name"
+                />
+              </div>
+              <div>
+                <Label htmlFor="email" className="text-sm font-medium text-card-foreground mb-2">
+                  Email
+                </Label>
+                <Input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="w-full"
+                  data-testid="input-email"
+                />
+              </div>
+              <div>
+                <Label htmlFor="message" className="text-sm font-medium text-card-foreground mb-2">
+                  Mensagem
+                </Label>
+                <Textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  required
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  className="w-full resize-none"
+                  data-testid="input-message"
+                />
+              </div>
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                data-testid="button-submit-form"
+              >
+                {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
+              </Button>
+            </form>
+          </div>
+
+          {/* Contact Info */}
+          <div className="space-y-8">
+            <div className="bg-card p-8 rounded-2xl border border-border" data-testid="contact-info">
+              <h3 className="text-2xl font-semibold text-card-foreground mb-6">Ou fale diretamente conosco</h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <SiWhatsapp className="text-primary text-xl" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-card-foreground">WhatsApp</h4>
+                    <p className="text-muted-foreground">Atendimento imediato via IA</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Mail className="text-primary text-xl" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-card-foreground">Email</h4>
+                    <p className="text-muted-foreground">contato@havrtecnologia.com</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Clock className="text-primary text-xl" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-card-foreground">Horário</h4>
+                    <p className="text-muted-foreground">24/7 com IA - Segunda à Sexta 8h às 18h</p>
+                  </div>
+                </div>
+              </div>
+
+              <a
+                href="https://wa.me/5511999999999"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center justify-center space-x-2"
+                data-testid="button-whatsapp-contact"
+              >
+                <SiWhatsapp />
+                <span>Falar no WhatsApp</span>
+              </a>
+            </div>
+
+            {/* CTA Card */}
+            <div className="gradient-bg p-8 rounded-2xl text-white" data-testid="contact-cta">
+              <h3 className="text-2xl font-bold mb-4">Pronto para inovar?</h3>
+              <p className="mb-6 opacity-90">
+                Transforme seu negócio com nossas soluções personalizadas. Solicite uma demonstração gratuita.
+              </p>
+              <Button 
+                className="bg-white text-primary hover:bg-white/90"
+                data-testid="button-demo-free"
+              >
+                Demonstração Gratuita
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
